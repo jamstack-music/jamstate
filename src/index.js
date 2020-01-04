@@ -4,9 +4,9 @@ import {
   createStore as createReduxStore,
 } from 'redux';
 
-import MembersReducer from './Members/reducer';
-import SongsReducer from './Songs/reducer';
-import RoomReducer from './Room/reducer';
+import MembersReducer from './state/Members/reducer';
+import SongsReducer from './state/Songs/reducer';
+import RoomReducer from './state/Room/reducer';
 
 export const rootReducer = combineReducers({
   members: MembersReducer,
