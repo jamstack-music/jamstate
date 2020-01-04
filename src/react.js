@@ -5,7 +5,7 @@ import React, {
   useState,
 } from 'react';
 
-import { createStore } from './index';
+import { createStore } from './store';
 
 export const ReduxContext = React.createContext(null);
 
