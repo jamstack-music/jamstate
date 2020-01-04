@@ -1,4 +1,4 @@
-import { wrapReducer } from '../lib';
+import { wrapReducer } from '../../lib';
 
 import INIT_STATE from './state';
 
