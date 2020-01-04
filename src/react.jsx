@@ -7,7 +7,7 @@ import React, {
 
 import { createStore } from './index';
 
-export const ReduxContext = React.createContext();
+export const ReduxContext = React.createContext(null);
 
 export const ReduxContainer = (props) => {
   const { children } = props;
