@@ -19,10 +19,13 @@ const roomReducer = {
     ...state,
     isPrivate: false,
   }),
+  setRoomType: (state, type) => ({
+    ...state,
+    type,
+  }),
   initRoom: (state, room) => ({
     ...state,
-    name: room.name,
-    code: room.code,
+    ...room,
   }),
 };
 
