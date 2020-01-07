@@ -40,6 +40,14 @@ const songsReducer = {
     }
     return { ...state, queue };
   },
+  playSong: (state) => ({
+    ...state,
+    isPlaying: true,
+  }),
+  pauseSong: (state) => ({
+    ...state,
+    isPlaying: false,
+  }),
   initRoom: (state, room) => ({
     ...state,
     superBumpEnabled: room.superBumpEnabled || state.superBumpEnabled,
