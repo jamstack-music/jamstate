@@ -9,7 +9,7 @@ const membersReducer = {
   }),
   initRoom: (state, room) => ({
     ...state,
-    all: room.members,
+    all: room.members || state.all,
   }),
 };
 

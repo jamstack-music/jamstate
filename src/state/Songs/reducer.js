@@ -42,9 +42,9 @@ const songsReducer = {
   },
   initRoom: (state, room) => ({
     ...state,
-    superBumpEnabled: room.superBumpEnabled,
-    queue: room.queue,
-    current: room.currentSong,
+    superBumpEnabled: room.superBumpEnabled || state.superBumpEnabled,
+    queue: room.queue || state.queue,
+    current: room.currentSong || state.current,
   }),
 };
 
