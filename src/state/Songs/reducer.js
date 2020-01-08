@@ -8,11 +8,17 @@ const superBump = (queue) => {
 
 const songsReducer = {
   addSong: (state, song) => {
-    if (state.queue.length === 0 && !state.current.uri) {
-      return { ...state, current: song };
+    const newSong = {
+      ...song,
+      bumps: 0,
+      alreadyBumped: false,
+    };
+
+    if (state.queue.length === 0 && !state.current.id) {
+      return { ...state, current: newSong };
     }
 
-    return { ...state, queue: [...state.queue, song] };
+    return { ...state, queue: [...state.queue, newSong] };
   },
   skipSong: (state) => {
     if (state.queue.length === 0) return state;
