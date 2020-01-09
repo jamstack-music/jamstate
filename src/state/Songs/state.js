@@ -1,5 +1,5 @@
 export default {
-  current: {},
+  current: null,
   queue: [],
   superBumpEnabled: true,
   isPlaying: false,

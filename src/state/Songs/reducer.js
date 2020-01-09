@@ -14,16 +14,22 @@ const songsReducer = {
       alreadyBumped: false,
     };
 
-    if (state.queue.length === 0 && !state.current.id) {
-      return { ...state, current: newSong };
+    if (state.current) {
+      return { ...state, queue: [...state.queue, newSong] };
     }
 
-    return { ...state, queue: [...state.queue, newSong] };
+    return { ...state, current: newSong };
   },
   skipSong: (state) => {
-    if (state.queue.length === 0) return state;
+    if (state.queue.length === 0) {
+      return {
+        ...state,
+        current: null,
+      };
+    }
 
     return {
+      ...state,
       current: state.queue[0],
       queue: state.queue.slice(1, state.queue.length),
     };
