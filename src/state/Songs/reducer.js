@@ -20,7 +20,7 @@ const songsReducer = {
 
     return { ...state, current: newSong };
   },
-  skipSong: (state) => {
+  nextSong: (state) => {
     if (state.queue.length === 0) {
       return {
         ...state,
